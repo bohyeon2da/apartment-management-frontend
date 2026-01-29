@@ -1,0 +1,191 @@
+/* RAEMIAN Design - Modal */
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.225s cubic-bezier(0, 0, 0.2, 1);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.modal-content {
+  background: white;
+  border-radius: 8px;
+  max-width: 800px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  animation: scaleIn 0.225s cubic-bezier(0, 0, 0.2, 1);
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px;
+  border-bottom: 1px solid #e0e0e0;
+  background: linear-gradient(160deg, rgba(0, 200, 195, 0.05) 2%, rgba(65, 90, 222, 0.05) 83%);
+}
+
+.modal-header h2 {
+  margin: 0;
+  color: #333;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.modal-close {
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #999;
+  line-height: 1;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  transition: all 0.2s ease;
+  border-radius: 50%;
+}
+
+.modal-close:hover {
+  color: #333;
+  background: #f0f0f0;
+}
+
+.modal-body {
+  padding: 24px;
+}
+
+.modal-info {
+  display: grid;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.modal-info-row {
+  display: flex;
+  gap: 12px;
+}
+
+.modal-info-label {
+  font-weight: 500;
+  color: #415ADE;
+  min-width: 100px;
+  font-size: 14px;
+}
+
+.modal-info-value {
+  color: #333;
+  font-size: 14px;
+}
+
+.modal-content-text {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  word-break: break-word;
+  min-height: 200px;
+  font-size: 14px;
+  color: #333;
+  border-left: 3px solid #415ADE;
+}
+
+.modal-footer {
+  padding: 20px 24px;
+  border-top: 1px solid #e0e0e0;
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  background: #fafafa;
+}
+
+.modal-footer button {
+  padding: 10px 24px;
+  border: none;
+  border-radius: 24px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.225s cubic-bezier(0, 0, 0.2, 1);
+}
+
+.modal-footer .btn-close {
+  background: #6c757d;
+  color: white;
+}
+
+.modal-footer .btn-close:hover {
+  background: #5a6268;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(108, 117, 125, 0.3);
+}
+
+.modal-footer .btn-edit {
+  background: linear-gradient(160deg, #00C8C3 2%, #415ADE 83%);
+  color: white;
+}
+
+.modal-footer .btn-edit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(65, 90, 222, 0.3);
+}
+
+.modal-footer .btn-delete {
+  background: #F44336;
+  color: white;
+}
+
+.modal-footer .btn-delete:hover {
+  background: #d32f2f;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(244, 67, 54, 0.3);
+}
+
+/* Badges */
+.badge {
+  display: inline-block;
+  padding: 5px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.badge-pinned {
+  background: linear-gradient(135deg, #ffc107 0%, #ff9800 100%);
+  color: #000;
+}
+
+.badge-active {
+  background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+  color: white;
+}
