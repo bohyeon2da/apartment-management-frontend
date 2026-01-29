@@ -17,6 +17,7 @@ function ComplaintsPage() {
 
   useEffect(() => {
     loadComplaints();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [page, statusFilter]);
 
   const loadComplaints = async () => {
